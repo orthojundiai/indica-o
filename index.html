@@ -1,0 +1,298 @@
+<html lang="pt-BR
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Indicações - Orthodontic Jundiaí</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .logo {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: white;
+    }
+    h1 {
+        color: #333;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+.website {
+        color: #667eea;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    .main-title {
+        text-align: center;
+        color: #667eea;
+        font-size: 2.2rem;
+        margin: 40px 0 20px;
+        font-weight: bold;
+    }
+    .subtitle {
+        text-align: center;
+        color: #666;
+        font-size: 1.3rem;
+        margin-bottom: 40px;
+    }
+    .form-section {
+        background: #f8f9ff;
+        padding: 30px;
+        border-radius: 15px;
+        margin-bottom: 30px;
+    }
+    .form-section h2 {
+        color: #667eea;
+        margin-bottom: 25px;
+        font-size: 1.5rem;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+        font-size: 1rem;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    .form-group input:focus {
+        border-color: #667eea;
+        outline: none;
+    }
+    .submit-btn {
+        width: 100%;
+        padding: 18px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+ .how-it-works {
+        margin-top: 40px;
+        background: #f8f9ff;
+        padding: 30px;
+        border-radius: 15px;
+    }
+    .how-it-works h3 {
+        color: #667eea;
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+        margin-top: 20px;
+    }
+    .step {
+        text-align: center;
+        padding: 25px;
+        background: white;
+        border-radius: 10px;
+    }
+    .step-number {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .step h4 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    .step p {
+        color: #666;
+        font-size: 0.95rem;
+    }
+    .referrals-list {
+        margin-top: 40px;
+    }
+    .referrals-list h3 {
+        color: #667eea;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+    .referral-item {
+        background: #f8f9ff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        border-left: 4px solid #667eea;
+    }
+</style>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="logo.jpg" alt="Orthodontic Logo" style="width: 90px; height: 90px; object-fit: contain;">
+        </div>
+        <h1>OrthoDontic - Jundiaí</h1>
+        <div class="website">VIVA O SEU MELHOR</div>
+    </div>
+    <!-- Main Title -->
+    <h2 class="main-title">INDIQUE E GANHE PIX!</h2>
+    <p class="subtitle">Cada amigo que virar paciente = R$ 30,00 no PIX</p>
+    <!-- Referral Form -->
+    <div class="form-section">
+        <h2>📝 Fazer Nova Indicação</h2>
+        <form id="referralForm">
+            <div class="form-group">
+                <label for="referrerName">Seu Nome Completo:</label>
+                <input type="text" id="referrerName" required>
+            </div>
+            <div class="form-group">
+                <label for="referrerPhone">Seu Telefone:</label>
+                <input type="tel" id="referrerPhone" required>
+            </div>
+            <div class="form-group">
+                <label for="friendName">Nome do Amigo:</label>
+                <input type="text" id="friendName" required>
+            </div>
+            <div class="form-group">
+                <label for="friendPhone">Telefone do Amigo:</label>
+                <input type="tel" id="friendPhone" required>
+            </div>
+            <button type="submit" class="submit-btn">🎯 Enviar Indicação</button>
+        </form>
+    </div>
+    <!-- How it Works -->
+    <div class="how-it-works">
+        <h3>Como Funciona</h3>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Indique um Amigo</h4>
+                <p>Preencha o formulário com os dados do seu amigo</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Amigo Agenda</h4>
+                <p>Seu amigo agenda uma consulta na clínica</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Você Ganha PIX</h4>
+                <p>Receba R$ 30,00 diretamente no seu PIX</p>
+            </div>
+        </div>
+    </div>
+    <!-- Referrals List -->
+    <div class="referrals-list">
+        <h3>📋 Suas Indicações</h3>
+        <div id="referralsList">
+            <p>Nenhuma indicação ainda. Faça sua primeira indicação acima!</p>
+        </div>
+    </div>
+</div>
+<script>
+    // Dados simulados
+    let referrals = JSON.parse(localStorage.getItem('referrals')) || [];
+    let nextId = parseInt(localStorage.getItem('nextId')) || 1;
+    // Salvar dados
+    function saveData() {
+        localStorage.setItem('referrals', JSON.stringify(referrals));
+        localStorage.setItem('nextId', nextId.toString());
+    }
+    // Função para enviar indicação
+    document.getElementById('referralForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('referrerName').value;
+        const phone = document.getElementById('referrerPhone').value;
+        const friendName = document.getElementById('friendName').value;
+        const friendPhone = document.getElementById('friendPhone').value;
+        if (!name || !phone || !friendName || !friendPhone) {
+            alert('Por favor, preencha todos os campos!');
+            return;
+        }
+        const referral = {
+            id: nextId++,
+            referrerName: name,
+            referrerPhone: phone,
+            friendName: friendName,
+            friendPhone: friendPhone,
+            date: new Date().toLocaleDateString('pt-BR'),
+            status: 'pending',
+            points: 0
+        };
+        referrals.push(referral);
+        saveData();
+        // Limpar formulário
+        document.getElementById('referralForm').reset();
+        // Mostrar mensagem de sucesso
+        alert('🎉 Indicação enviada com sucesso!');
+        // Atualizar lista
+        loadReferrals();
+    });
+    // Carregar indicações na página
+    function loadReferrals() {
+        const container = document.getElementById('referralsList');
+        container.innerHTML = '';
+        if (referrals.length === 0) {
+            container.innerHTML = '<p>Nenhuma indicação ainda. Faça sua primeira indicação acima!</p>';
+            return;
+        }
+        referrals.forEach(referral => {
+            const div = document.createElement('div');
+            div.className = 'referral-item';
+            div.innerHTML = `
+                <h4>👤 ${referral.friendName}</h4>
+                <p><strong>📞 Telefone:</strong> ${referral.friendPhone}</p>
+                <p><strong>📅 Data:</strong> ${referral.date}</p>
+                <p><strong>📊 Status:</strong> Pendente</p>
+            `;
+            container.appendChild(div);
+        });
+    }
+    // Inicializar página
+    document.addEventListener('DOMContentLoaded', function() {
+        loadReferrals();
+    });
+</script>
